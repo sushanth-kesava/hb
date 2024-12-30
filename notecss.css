@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Eater&family=Lavishly+Yours&display=swap');
+body{
+    align-items: center;
+    background: 	#FFB6C1; /* Starting body background color */
+    animation: bodyColorChange 6s infinite alternate;
+}
+.love {
+    align-content: center;
+    align-items: center;
+}
+.you {
+    font-family: "Fleur De Leah", cursive;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 40px;
+    color: white; /* Starting h1 text color */
+    animation: textColorChange 6s infinite alternate;
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.8); /* Initial shadow contrast */
+}
+.prop {
+    font-family: "Fleur De Leah", cursive;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 50px;
+    color: white; /* Starting h1 text color */
+    animation: textColorChange 6s infinite alternate;
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.8); /* Initial shadow contrast */
+}
+.quote {
+    font-family: "Fleur De Leah", cursive;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 40px;
+    color: white; /* Starting h1 text color */
+    animation: textColorChange 6s infinite alternate;
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.8); /* Initial shadow contrast */
+}
+@keyframes bodyColorChange {
+    0% {
+        background-color:rgba(255, 20, 147, 0.8); /* Initial background */
+    }
+    100% {
+        background-color: white; /* Transition to white background */
+    }
+}
+
+@keyframes textColorChange {
+    0% {
+        color: white; /* Initial text color */
+        text-shadow: 0 0 20px rgba(255, 20, 147, 0.8); /* Shadow contrasts with white text */
+    }
+    100% {
+        color: rgba(255, 20, 147, 0.8); /* Text color transitions to pink */
+        text-shadow: 0 0 20px white; /* Shadow contrasts with pink text */
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 20, 147, 0.8);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 2em;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.navbar ul {
+    list-style: none;
+    display:flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: black;
+    transform: scale(5);
+}
+
+.menu-toggle {
+    display: none;
+
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    background-color: #fff;
+    height: 3px;
+    width: 30px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.nav-item a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+
+        background-color: rgba(255, 20, 147, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 250px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar ul.active {
+        display: contents;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+}
